@@ -5,18 +5,19 @@ import java.util.*;
 import java.lang.*;
 
 public class Ques9 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a string: ");
-        String st = scanner.next();
-        StringBuffer str =new StringBuffer(st);
 
-        int len=str.length();
-        for(int i=0;i<len/2;i++) {
-            char ch=str.charAt(i);
-            str.setCharAt(i,str.charAt(len-i-1));
-            str.setCharAt((len-i-1),ch);
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String str1 = sc.next();
+        String str2 = "";
+
+        for (int i=str1.length()-1; i>=0; i--) {
+            str2 += str1.charAt(i);
         }
-        System.out.println(str);
+
+        System.out.println(str2);
+
     }
 }
